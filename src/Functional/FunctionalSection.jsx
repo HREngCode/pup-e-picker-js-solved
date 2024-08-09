@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
+import { FunctionalDogs } from "./FunctionalDogs";
 
-export const FunctionalSection = () => {
+export const FunctionalSection = ({ allDogs }) => {
   return (
     <section id="main-section">
       <div className="container-header">
@@ -23,7 +24,9 @@ export const FunctionalSection = () => {
           </div>
         </div>
       </div>
-      <div className="content-container"></div>
+      <div className="content-container">
+        <FunctionalDogs allDogs={allDogs} />
+      </div>
     </section>
   );
 };

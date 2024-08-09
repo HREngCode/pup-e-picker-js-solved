@@ -2,12 +2,28 @@ import { DogCard } from "../Shared/DogCard";
 import { dogPictures } from "../dog-pictures";
 
 // Right now these dogs are constant, but in reality we should be getting these from our server
-export const FunctionalDogs = () => {
+export const FunctionalDogs = ({ allDogs }) => {
   return (
     //  the "<> </>"" are called react fragments, it's like adding all the html inside
     // without adding an actual html element
     <>
-      <DogCard
+      {allDogs.map((dog) => (
+        <li key={dog.id}>
+          <div>
+            <DogCard
+              dog={{
+                id: dog.id,
+                image: dog.image,
+                description: dog.description,
+                isFavorite: dog.isFavorite,
+                name: dog.name,
+              }}
+            />
+          </div>
+        </li>
+      ))}
+
+      {/* <DogCard
         dog={{
           id: 1,
           image: dogPictures.BlueHeeler,
@@ -86,7 +102,7 @@ export const FunctionalDogs = () => {
           alert("clicked empty heart");
         }}
         isLoading={false}
-      />
+      /> */}
     </>
   );
 };
