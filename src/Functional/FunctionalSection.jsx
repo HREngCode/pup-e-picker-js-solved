@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
-import { FunctionalDogs } from "./FunctionalDogs";
 
-export const FunctionalSection = ({ allDogs }) => {
+export const FunctionalSection = ({
+  children,
+  favoriteDogsCount,
+  unfavoriteDogsCount,
+}) => {
   return (
     <section id="main-section">
       <div className="container-header">
@@ -12,21 +15,19 @@ export const FunctionalSection = ({ allDogs }) => {
         <div className="selectors">
           {/* This should display the favorited count */}
           <div className={`selector active`} onClick={() => {}}>
-            favorited ( 12 )
+            favorited ( {favoriteDogsCount} )
           </div>
 
           {/* This should display the unfavorited count */}
           <div className={`selector`} onClick={() => {}}>
-            unfavorited ( 25 )
+            unfavorited ( {unfavoriteDogsCount} )
           </div>
           <div className={`selector`} onClick={() => {}}>
             create dog
           </div>
         </div>
       </div>
-      <div className="content-container">
-        <FunctionalDogs allDogs={allDogs} />
-      </div>
+      <div className="content-container">{children}</div>
     </section>
   );
 };
