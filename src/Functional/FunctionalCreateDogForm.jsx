@@ -4,10 +4,16 @@ import { dogPictures } from "../dog-pictures";
 // use this as your default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = () => {
-  const [dogName, setDogName] = useState("");
-  const [description, setDescription] = useState("");
-  const [picture, setPicture] = useState(defaultSelectedImage);
+export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
+  const [dogNameInput, setDogNameInput] = useState("");
+  const [descriptionInput, setDescriptionInput] = useState("");
+  const [imageInput, setImageInput] = useState(defaultSelectedImage);
+
+  const clearForm = () => {
+    setDogNameInput("");
+    setDescriptionInput("");
+    setImageInput("");
+  };
 
   return (
     <form
@@ -15,36 +21,49 @@ export const FunctionalCreateDogForm = () => {
       id="create-dog-form"
       onSubmit={(e) => {
         e.preventDefault();
+        onCreateNewDog({
+          name: dogNameInput,
+          description: descriptionInput,
+          image: imageInput,
+        });
+        console.log({
+          dogNameInput,
+          descriptionInput,
+          imageInput,
+        });
+        clearForm();
       }}
     >
       <h4>Create a New Dog</h4>
       <label htmlFor="name">Dog Name</label>
       <input
         type="text"
-        value={dogName}
+        name="name"
+        value={dogNameInput}
         onChange={(e) => {
-          setDogName(e.target.value);
+          setDogNameInput(e.target.value);
         }}
         disabled={false}
       />
       <label htmlFor="description">Dog Description</label>
       <textarea
-        name=""
+        name="description"
         id=""
         cols={80}
         rows={10}
-        value={description}
+        value={descriptionInput}
         onChange={(e) => {
-          setDescription(e.target.value);
+          setDescriptionInput(e.target.value);
         }}
         disabled={false}
       ></textarea>
       <label htmlFor="picture">Select an Image</label>
       <select
+        name="image"
         id="picture-select"
-        value={picture}
+        value={imageInput}
         onChange={(e) => {
-          setPicture(e.target.value);
+          setImageInput(e.target.value);
         }}
       >
         {Object.entries(dogPictures).map(([label, pictureValue]) => {

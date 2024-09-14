@@ -139,6 +139,24 @@
       "description": "synergies Loan up Interface API Gloves synthesize",
       "isFavorite": false,
       "id": 19
+    },
+    {
+      "name": "Rudy Poo",
+      "description": "Candy Ass!!",
+      "image": "/assets/blue-heeler.png",
+      "id": 20
+    },
+    {
+      "name": "Geofina",
+      "description": "A geologist that likes water!!!",
+      "image": "/assets/boxer.jpeg",
+      "id": 21
+    },
+    {
+      "name": "Smacky",
+      "description": "Smacky dog!! Smacks his lips when he eats!!",
+      "image": "/assets/chihuahua.avif",
+      "id": 22
     }
   ]
 }

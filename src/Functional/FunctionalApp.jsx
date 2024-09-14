@@ -47,6 +47,16 @@ export function FunctionalApp() {
     );
   };
 
+  const createNewDog = (dog) => {
+    Requests.createDog(dog).then(() => {
+      Requests.getAllDogs().then((dogs) => {
+        setAllDogs(dogs);
+        setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
+        setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
+      });
+    });
+  };
+
   const deleteDog = (dogId) => {
     setIsLoading(true);
 
@@ -77,7 +87,7 @@ export function FunctionalApp() {
         favoriteDogsCount={favoriteDogs.length}
         unfavoriteDogsCount={unfavoriteDogs.length}
         activeTab={activeTab}
-        handleTabChange={handleTabChange}
+        onHandleTabChange={handleTabChange}
       >
         {(!activeTab || activeTab === "all") && (
           <FunctionalDogs
@@ -100,7 +110,9 @@ export function FunctionalApp() {
             onDeleteDog={deleteDog}
           />
         )}
-        {activeTab === "createDog" && <FunctionalCreateDogForm />}
+        {activeTab === "createDog" && (
+          <FunctionalCreateDogForm onCreateNewDog={createNewDog} />
+        )}
       </FunctionalSection>
     </div>
   );
