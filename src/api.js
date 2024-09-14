@@ -9,7 +9,15 @@ export const Requests = {
   postDog: () => {},
 
   // should delete a dog from the database
-  deleteDog: () => {},
+  deleteDog: (dogId) => {
+    return fetch(`${baseUrl}/dogs/${dogId}`, {
+      method: "DELETE",
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to delete the dog");
+      }
+    });
+  },
 
   updateDog: () => {},
 
