@@ -6,7 +6,7 @@ export const Requests = {
     fetch(`${baseUrl}/dogs`).then((response) => response.json()),
   // should create a dog in the database from a partial dog object
   // and return a promise with the result
-  createDog: (dog) => {
+  postDog: (dog) => {
     return fetch(`${baseUrl}/dogs`, {
       body: JSON.stringify(dog),
       method: "POST",
@@ -16,7 +16,17 @@ export const Requests = {
     }).then((response) => response.json());
   },
 
-  // should delete a dog from the database
+  // update the dog ID
+  updateDog: (dog) => {
+    return fetch(`${baseUrl}/dogs/${dog.id}`, {
+      body: JSON.stringify(dog),
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).then((response) => response.json());
+  },
+
   deleteDog: (dogId) => {
     return fetch(`${baseUrl}/dogs/${dogId}`, {
       method: "DELETE",
@@ -26,8 +36,6 @@ export const Requests = {
       }
     });
   },
-
-  updateDog: () => {},
 
   // Just a dummy function for use in the playground
   dummyFunction: () => {

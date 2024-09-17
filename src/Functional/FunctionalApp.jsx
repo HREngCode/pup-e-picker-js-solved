@@ -28,27 +28,29 @@ export function FunctionalApp() {
   };
 
   const toggleFavoriteStatus = (dogId) => {
-    setAllDogs((prevDogs) =>
-      prevDogs.map((dog) =>
-        dog.id === dogId ? { ...dog, isFavorite: !dog.isFavorite } : dog
-      )
-    );
+    setAllDogs((prevDogs) => {
+      const updatedDogs = prevDogs.map((dog) => {
+        if (dog.id === dogId) {
+          const updatedDog = { ...dog, isFavorite: !dog.isFavorite };
+          Requests.updateDog(updatedDog)
+            .then(() => {
+              setFavoriteDogs(updatedDogs.filter((dog) => dog.isFavorite));
+              setUnfavoriteDogs(updatedDogs.filter((dog) => !dog.isFavorite));
+            })
+            .catch((error) => {
+              console.error("Error updating dog:", error);
+            });
+          return updatedDog;
+        }
 
-    setFavoriteDogs((prevDogs) =>
-      prevDogs.some((dog) => dog.id === dogId)
-        ? prevDogs.filter((dog) => dog.id !== dogId)
-        : [...prevDogs, allDogs.find((dog) => dog.id === dogId)]
-    );
-
-    setUnfavoriteDogs((prevDogs) =>
-      prevDogs.some((dog) => dog.id === dogId)
-        ? prevDogs.filter((dog) => dog.id !== dogId)
-        : [...prevDogs, allDogs.find((dog) => dog.id === dogId)]
-    );
+        return dog;
+      });
+      return updatedDogs;
+    });
   };
 
   const createNewDog = (dog) => {
-    Requests.createDog(dog).then(() => {
+    Requests.postDog(dog).then(() => {
       Requests.getAllDogs().then((dogs) => {
         setAllDogs(dogs);
         setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
@@ -89,7 +91,7 @@ export function FunctionalApp() {
         activeTab={activeTab}
         onHandleTabChange={handleTabChange}
       >
-        {(!activeTab || activeTab === "all") && (
+        {!activeTab && (
           <FunctionalDogs
             allDogs={allDogs}
             onToggleFavorite={toggleFavoriteStatus}

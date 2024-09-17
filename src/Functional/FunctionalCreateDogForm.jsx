@@ -26,11 +26,6 @@ export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
           description: descriptionInput,
           image: imageInput,
         });
-        console.log({
-          dogNameInput,
-          descriptionInput,
-          imageInput,
-        });
         clearForm();
       }}
     >

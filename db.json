@@ -4,14 +4,14 @@
       "name": "Miller",
       "image": "/assets/dalmation.png",
       "description": "tan Investor override hoarse blue volt extend North",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 0
     },
     {
       "name": "Tommie",
       "image": "/assets/dalmation.png",
       "description": "Officer zowie fluid Kansas deposit",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 1
     },
     {
@@ -157,6 +157,12 @@
       "description": "Smacky dog!! Smacks his lips when he eats!!",
       "image": "/assets/chihuahua.avif",
       "id": 22
+    },
+    {
+      "name": "Gypsy",
+      "description": "Dog won't quit moving around!!",
+      "image": "/assets/cowardly.png",
+      "id": 23
     }
   ]
 }
