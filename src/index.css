@@ -31,3 +31,7 @@ header h1 {
   letter-spacing: 10px;
   text-align: center;
 }
+
+li {
+  list-style: none;
+}

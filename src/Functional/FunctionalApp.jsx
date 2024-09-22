@@ -28,6 +28,7 @@ export function FunctionalApp() {
   };
 
   const toggleFavoriteStatus = (dogId) => {
+    setIsLoading(true);
     setAllDogs((prevDogs) => {
       const updatedDogs = prevDogs.map((dog) => {
         if (dog.id === dogId) {
@@ -47,9 +48,11 @@ export function FunctionalApp() {
       });
       return updatedDogs;
     });
+    setIsLoading(false);
   };
 
   const createNewDog = (dog) => {
+    setIsLoading(true);
     Requests.postDog(dog).then(() => {
       Requests.getAllDogs().then((dogs) => {
         setAllDogs(dogs);
@@ -57,11 +60,11 @@ export function FunctionalApp() {
         setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
       });
     });
+    setIsLoading(false);
   };
 
   const deleteDog = (dogId) => {
     setIsLoading(true);
-
     Requests.deleteDog(dogId)
       .then(() => {
         setAllDogs((prevDogs) => prevDogs.filter((dog) => dog.id !== dogId));

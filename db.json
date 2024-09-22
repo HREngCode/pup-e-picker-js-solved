@@ -147,12 +147,6 @@
       "id": 20
     },
     {
-      "name": "Geofina",
-      "description": "A geologist that likes water!!!",
-      "image": "/assets/boxer.jpeg",
-      "id": 21
-    },
-    {
       "name": "Smacky",
       "description": "Smacky dog!! Smacks his lips when he eats!!",
       "image": "/assets/chihuahua.avif",
@@ -163,6 +157,19 @@
       "description": "Dog won't quit moving around!!",
       "image": "/assets/cowardly.png",
       "id": 23
+    },
+    {
+      "name": "Barkley",
+      "description": "Dog from Sesame Street",
+      "image": "/assets/corgi.png",
+      "id": 24,
+      "isFavorite": true
+    },
+    {
+      "name": "Ginger",
+      "description": "She was gone on a 3 hour tour",
+      "image": "/assets/boxer.jpeg",
+      "id": 25
     }
   ]
 }
