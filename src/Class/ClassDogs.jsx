@@ -4,7 +4,7 @@ import { Component } from "react";
 // Right now these dogs are constant, but in reality we should be getting these from our server
 export class ClassDogs extends Component {
   render() {
-    const { allDogs, onToggleFavorite, onDeleteDog } = this.props;
+    const { allDogs, onToggleFavorite, onDeleteDog, isLoading } = this.props;
 
     return (
       <>
@@ -21,7 +21,7 @@ export class ClassDogs extends Component {
                 onTrashIconClick={() => onDeleteDog(dog.id)}
                 onHeartClick={() => onToggleFavorite(dog.id)}
                 onEmptyHeartClick={() => onToggleFavorite(dog.id)}
-                isLoading={false}
+                isLoading={isLoading}
               />
             </div>
           </li>

@@ -74,7 +74,7 @@
       "name": "Mckayla",
       "image": "/assets/dalmation.png",
       "description": "Wagon payment Industrial Northwest male generate Jerde Genderqueer",
-      "isFavorite": false,
+      "isFavorite": true,
       "id": 10
     },
     {
@@ -163,13 +163,32 @@
       "description": "Dog from Sesame Street",
       "image": "/assets/corgi.png",
       "id": 24,
-      "isFavorite": true
+      "isFavorite": false
     },
     {
       "name": "Ginger",
       "description": "She was gone on a 3 hour tour",
       "image": "/assets/boxer.jpeg",
       "id": 25
+    },
+    {
+      "name": "Venos",
+      "description": "Likes hot dogs and cool franks",
+      "image": "/assets/cowardly.png",
+      "id": 26
+    },
+    {
+      "name": "Sparks",
+      "description": "Electric personality and really lights a room",
+      "image": "/assets/chihuahua.avif",
+      "id": 27,
+      "isFavorite": false
+    },
+    {
+      "name": "Circle",
+      "description": "Likes to hang around. Always comes back to you",
+      "image": "/assets/corgi.png",
+      "id": 28
     }
   ]
 }

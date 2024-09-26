@@ -3,6 +3,7 @@ import { Requests } from "../api";
 import { ClassSection } from "./ClassSection";
 import { ClassDogs } from "./ClassDogs";
 import { ClassCreateDogForm } from "./ClassCreateDogForm";
+import toast from "react-hot-toast";
 
 export class ClassApp extends Component {
   constructor(props) {
@@ -67,6 +68,7 @@ export class ClassApp extends Component {
           favoriteDogs: dogs.filter((dog) => dog.isFavorite),
           unfavoriteDogs: dogs.filter((dog) => !dog.isFavorite),
         });
+        toast.success("Dog Created");
       });
     });
     this.setState({ isLoading: false });
@@ -115,6 +117,7 @@ export class ClassApp extends Component {
               allDogs={allDogs}
               onToggleFavorite={this.toggleFavoriteStatus}
               onDelete={this.deleteDog}
+              isLoading={isLoading}
             />
           )}
           {activeTab === "favorited" && (
@@ -122,6 +125,7 @@ export class ClassApp extends Component {
               allDogs={favoriteDogs}
               onToggleFavorite={this.toggleFavoriteStatus}
               onDelete={this.deleteDog}
+              isLoading={isLoading}
             />
           )}
           {activeTab === "unfavorited" && (
@@ -129,10 +133,14 @@ export class ClassApp extends Component {
               allDogs={unfavoriteDogs}
               onToggleFavorite={this.toggleFavoriteStatus}
               onDeleteDog={this.deleteDog}
+              isLoading={isLoading}
             />
           )}
           {activeTab === "createDog" && (
-            <ClassCreateDogForm onCreateNewDog={this.createNewDog} />
+            <ClassCreateDogForm
+              onCreateNewDog={this.createNewDog}
+              isLoading={isLoading}
+            />
           )}
         </ClassSection>
       </div>

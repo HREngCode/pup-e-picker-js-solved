@@ -47,7 +47,8 @@ export class ClassCreateDogForm extends Component {
   };
 
   render() {
-    const { dogNameInput, descriptionInput, imageInput } = this.state;
+    const { dogNameInput, descriptionInput, imageInput, isLoading } =
+      this.state;
     return (
       <form action="" id="create-dog-form" onSubmit={this.handleSubmit}>
         <h4>Create a New Dog</h4>
@@ -57,7 +58,7 @@ export class ClassCreateDogForm extends Component {
           name="name"
           value={dogNameInput}
           onChange={this.handleNameChange}
-          disabled={false}
+          disabled={isLoading}
         />
         <label htmlFor="description">Dog Description</label>
         <textarea
@@ -67,7 +68,7 @@ export class ClassCreateDogForm extends Component {
           rows={10}
           value={descriptionInput}
           onChange={this.handleDescriptionChange}
-          disabled={false}
+          disabled={isLoading}
         ></textarea>
         <label htmlFor="picture">Select an Image</label>
         <select
@@ -75,7 +76,7 @@ export class ClassCreateDogForm extends Component {
           id="picture-select"
           value={imageInput}
           onChange={this.handleImageChange}
-          disabled={false}
+          disabled={isLoading}
         >
           {Object.entries(dogPictures).map(([label, pictureValue]) => {
             return (
@@ -85,7 +86,7 @@ export class ClassCreateDogForm extends Component {
             );
           })}
         </select>
-        <input type="submit" />
+        <input type="submit" disabled={isLoading} />
       </form>
     );
   }

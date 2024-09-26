@@ -3,6 +3,7 @@ import { Requests } from "../api";
 import { FunctionalCreateDogForm } from "./FunctionalCreateDogForm";
 import { FunctionalSection } from "./FunctionalSection";
 import { FunctionalDogs } from "./FunctionalDogs";
+import toast from "react-hot-toast";
 
 export function FunctionalApp() {
   const [favoriteDogs, setFavoriteDogs] = useState([]);
@@ -23,7 +24,6 @@ export function FunctionalApp() {
         setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
         setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
       })
-
       .finally(() => setIsLoading(false));
   };
 
@@ -58,6 +58,7 @@ export function FunctionalApp() {
         setAllDogs(dogs);
         setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
         setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
+        toast.success("Dog Created");
       });
     });
     setIsLoading(false);
@@ -99,6 +100,7 @@ export function FunctionalApp() {
             allDogs={allDogs}
             onToggleFavorite={toggleFavoriteStatus}
             onDeleteDog={deleteDog}
+            isLoading={isLoading}
           />
         )}
         {activeTab === "favorited" && (
@@ -106,6 +108,7 @@ export function FunctionalApp() {
             allDogs={favoriteDogs}
             onToggleFavorite={toggleFavoriteStatus}
             onDeleteDog={deleteDog}
+            isLoading={isLoading}
           />
         )}
         {activeTab === "unfavorited" && (
@@ -113,10 +116,14 @@ export function FunctionalApp() {
             allDogs={unfavoriteDogs}
             onToggleFavorite={toggleFavoriteStatus}
             onDeleteDog={deleteDog}
+            isLoading={isLoading}
           />
         )}
         {activeTab === "createDog" && (
-          <FunctionalCreateDogForm onCreateNewDog={createNewDog} />
+          <FunctionalCreateDogForm
+            onCreateNewDog={createNewDog}
+            isLoading={isLoading}
+          />
         )}
       </FunctionalSection>
     </div>

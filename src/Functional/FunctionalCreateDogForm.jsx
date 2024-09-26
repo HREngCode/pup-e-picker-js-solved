@@ -4,7 +4,7 @@ import { dogPictures } from "../dog-pictures";
 // use this as your default selected image
 const defaultSelectedImage = dogPictures.BlueHeeler;
 
-export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
+export const FunctionalCreateDogForm = ({ onCreateNewDog, isLoading }) => {
   const [dogNameInput, setDogNameInput] = useState("");
   const [descriptionInput, setDescriptionInput] = useState("");
   const [imageInput, setImageInput] = useState(defaultSelectedImage);
@@ -38,7 +38,7 @@ export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
         onChange={(e) => {
           setDogNameInput(e.target.value);
         }}
-        disabled={false}
+        disabled={isLoading}
       />
       <label htmlFor="description">Dog Description</label>
       <textarea
@@ -50,7 +50,7 @@ export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
         onChange={(e) => {
           setDescriptionInput(e.target.value);
         }}
-        disabled={false}
+        disabled={isLoading}
       ></textarea>
       <label htmlFor="picture">Select an Image</label>
       <select
@@ -69,7 +69,7 @@ export const FunctionalCreateDogForm = ({ onCreateNewDog }) => {
           );
         })}
       </select>
-      <input type="submit" />
+      <input type="submit" disabled={isLoading} />
     </form>
   );
 };
