@@ -150,4 +150,4 @@ If the data is still loading then...
 - [x] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
 - [x] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
 - [x] After the submission the form should be cleared, and the select should return to the default
-- [x ] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"
+- [x] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"
