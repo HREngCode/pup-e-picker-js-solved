@@ -49,7 +49,8 @@ export class ClassApp extends Component {
             })
             .catch((error) => {
               console.error("Error updating dog:", error);
-            });
+            })
+            .finally(() => this.setState({ isLoading: false }));
           return updatedDog;
         }
         return dog;
@@ -61,17 +62,18 @@ export class ClassApp extends Component {
 
   createNewDog = (dog) => {
     this.setState({ isLoading: true });
-    Requests.postDog(dog).then(() => {
-      Requests.getAllDogs().then((dogs) => {
-        this.setState({
-          allDogs: dogs,
-          favoriteDogs: dogs.filter((dog) => dog.isFavorite),
-          unfavoriteDogs: dogs.filter((dog) => !dog.isFavorite),
+    Requests.postDog(dog)
+      .then(() => {
+        Requests.getAllDogs().then((dogs) => {
+          this.setState({
+            allDogs: dogs,
+            favoriteDogs: dogs.filter((dog) => dog.isFavorite),
+            unfavoriteDogs: dogs.filter((dog) => !dog.isFavorite),
+          });
+          toast.success("Dog Created");
         });
-        toast.success("Dog Created");
-      });
-    });
-    this.setState({ isLoading: false });
+      })
+      .finally(() => this.setState({ isLoading: false }));
   };
 
   deleteDog = (dogId) => {
