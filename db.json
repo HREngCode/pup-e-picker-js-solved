@@ -175,7 +175,8 @@
       "name": "Venos",
       "description": "Likes hot dogs and cool franks",
       "image": "/assets/cowardly.png",
-      "id": 26
+      "id": 26,
+      "isFavorite": false
     },
     {
       "name": "Sparks",

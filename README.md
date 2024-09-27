@@ -39,8 +39,8 @@ To get this project setup, you should:
 
 ## Standard Requirements
 
-- [ ] Setup eslint
-- [ ] Pass all linting checks
+- [ x ] Setup eslint
+- [ x ] Pass all linting checks
 
 - To check if linting passes, run `npm run lint`
 
@@ -140,8 +140,8 @@ You should use conditional rendering to show different components inside of the 
 
 If the data is still loading then...
 
-- [ ] All inputs should be disabled
-- [ ] Buttons should be disabled
+- [x] All inputs should be disabled
+- [x] Buttons should be disabled
 
 ## What happens when you submit the form
 
@@ -150,4 +150,4 @@ If the data is still loading then...
 - [x] If you navigate to the `favorited` tab, you should NOT see the new dog in the list of dogs
 - [x] If you navigate to the `unfavorited` tab, you should see the new dog in the list of dogs
 - [x] After the submission the form should be cleared, and the select should return to the default
-- [ ] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"
+- [x ] After submitting a toast notification from `react-hot-toast` should appear saying "Dog Created"

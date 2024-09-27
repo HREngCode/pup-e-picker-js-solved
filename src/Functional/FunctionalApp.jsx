@@ -40,7 +40,8 @@ export function FunctionalApp() {
             })
             .catch((error) => {
               console.error("Error updating dog:", error);
-            });
+            })
+            .finally(() => setIsLoading(false));
           return updatedDog;
         }
 
@@ -53,15 +54,16 @@ export function FunctionalApp() {
 
   const createNewDog = (dog) => {
     setIsLoading(true);
-    Requests.postDog(dog).then(() => {
-      Requests.getAllDogs().then((dogs) => {
-        setAllDogs(dogs);
-        setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
-        setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
-        toast.success("Dog Created");
-      });
-    });
-    setIsLoading(false);
+    Requests.postDog(dog)
+      .then(() => {
+        Requests.getAllDogs().then((dogs) => {
+          setAllDogs(dogs);
+          setFavoriteDogs(dogs.filter((dog) => dog.isFavorite));
+          setUnfavoriteDogs(dogs.filter((dog) => !dog.isFavorite));
+          toast.success("Dog Created");
+        });
+      })
+      .finally(() => setIsLoading(false));
   };
 
   const deleteDog = (dogId) => {
