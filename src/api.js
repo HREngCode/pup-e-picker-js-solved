@@ -27,8 +27,8 @@ export const Requests = {
     }).then((response) => response.json());
   },
 
-  deleteDog: (dogId) => {
-    return fetch(`${baseUrl}/dogs/${dogId}`, {
+  deleteDog: (id) => {
+    return fetch(`${baseUrl}/dogs/${id}`, {
       method: "DELETE",
     }).then((response) => {
       if (!response.ok) {

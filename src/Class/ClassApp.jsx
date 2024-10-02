@@ -118,7 +118,7 @@ export class ClassApp extends Component {
             <ClassDogs
               allDogs={allDogs}
               onToggleFavorite={this.toggleFavoriteStatus}
-              onDelete={this.deleteDog}
+              onDeleteDog={this.deleteDog}
               isLoading={isLoading}
             />
           )}
@@ -126,7 +126,7 @@ export class ClassApp extends Component {
             <ClassDogs
               allDogs={favoriteDogs}
               onToggleFavorite={this.toggleFavoriteStatus}
-              onDelete={this.deleteDog}
+              onDeleteDog={this.deleteDog}
               isLoading={isLoading}
             />
           )}

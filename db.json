@@ -1,195 +1,144 @@
 {
   "dogs": [
     {
-      "name": "Miller",
-      "image": "/assets/dalmation.png",
-      "description": "tan Investor override hoarse blue volt extend North",
+      "name": "Tremayne",
+      "image": "/assets/chihuahua.avif",
+      "description": "primary Persevering Diesel vainly black lifetime shadowbox",
       "isFavorite": true,
       "id": 0
     },
     {
-      "name": "Tommie",
-      "image": "/assets/dalmation.png",
-      "description": "Officer zowie fluid Kansas deposit",
-      "isFavorite": true,
+      "name": "Angelina",
+      "image": "/assets/boxer.png",
+      "description": "East Shoes Bacon sniffle lavender overriding fancy",
+      "isFavorite": false,
       "id": 1
     },
     {
-      "name": "Joe",
-      "image": "/assets/boxer.png",
-      "description": "Northeast Liechtenstein Northwest Male Non",
+      "name": "Dereck",
+      "image": "/assets/dalmation.png",
+      "description": "Account defaeco SDD Plastic Skyway antepono Hatchback",
       "isFavorite": false,
       "id": 2
     },
     {
-      "name": "Kailyn",
-      "image": "/assets/dalmation.png",
-      "description": "abstergo Centralized Granite yellow Bicycle",
+      "name": "Cordell",
+      "image": "/assets/blue-heeler.png",
+      "description": "far Rubber Southwest Luxurious odio plum beautifully enterprise",
       "isFavorite": false,
       "id": 3
     },
     {
-      "name": "Alexander",
-      "image": "/assets/corgi.png",
-      "description": "Louisiana withdrawal Movies Dalasi Metrics ouch mobile steradian",
-      "isFavorite": true,
+      "name": "Tatum",
+      "image": "/assets/boxer.png",
+      "description": "Technician B2B male rarely violet withdrawal Shirt",
+      "isFavorite": false,
       "id": 4
     },
     {
-      "name": "Arjun",
-      "image": "/assets/corgi.png",
-      "description": "turquoise lest Montgomery Northeast Loan Optional parsing quam",
-      "isFavorite": true,
+      "name": "Hayden",
+      "image": "/assets/boxer.png",
+      "description": "Cotton dreamily male USB Nihonium teal Nobelium",
+      "isFavorite": false,
       "id": 5
     },
     {
-      "name": "Tad",
-      "image": "/assets/boxer.png",
-      "description": "1080p Grant Palladium Music male Jeep Senior Genderflux",
-      "isFavorite": true,
+      "name": "Myron",
+      "image": "/assets/corgi.png",
+      "description": "fur an female inhabitant up",
+      "isFavorite": false,
       "id": 6
     },
     {
-      "name": "Jalon",
-      "image": "/assets/cowardly.png",
-      "description": "withdrawal pascal Car Home Dee",
-      "isFavorite": true,
+      "name": "Annette",
+      "image": "/assets/blue-heeler.png",
+      "description": "Electronic Books Clothing Solutions Northeast",
+      "isFavorite": false,
       "id": 7
     },
     {
-      "name": "Zoie",
-      "image": "/assets/dalmation.png",
-      "description": "Malagasy Bicycle payment Strontium Southeast Electronic Keyboard Jordan",
-      "isFavorite": true,
+      "name": "Alyce",
+      "image": "/assets/cowardly.png",
+      "description": "Intranet North often turquoise Barbados",
+      "isFavorite": false,
       "id": 8
     },
     {
-      "name": "Louvenia",
-      "image": "/assets/corgi.png",
-      "description": "generate Handcrafted invoice male Small",
-      "isFavorite": false,
+      "name": "Antonette",
+      "image": "/assets/chihuahua.avif",
+      "description": "PNG Lithium relationships deposit Associate female CLI",
+      "isFavorite": true,
       "id": 9
     },
     {
-      "name": "Mckayla",
-      "image": "/assets/dalmation.png",
-      "description": "Wagon payment Industrial Northwest male generate Jerde Genderqueer",
+      "name": "Darwin",
+      "image": "/assets/chihuahua.avif",
+      "description": "Southeast jealously seamless secondary reassuringly",
       "isFavorite": true,
       "id": 10
     },
     {
-      "name": "Fredrick",
-      "image": "/assets/blue-heeler.png",
-      "description": "Cis open Identity defensive Man",
+      "name": "Anya",
+      "image": "/assets/cowardly.png",
+      "description": "Tools fruitful Architect minus Iran Passenger Sedan",
       "isFavorite": false,
       "id": 11
     },
     {
-      "name": "Jonatan",
-      "image": "/assets/corgi.png",
-      "description": "lumpy integrate accidentally Southeast Tianna",
+      "name": "Carmine",
+      "image": "/assets/cowardly.png",
+      "description": "Land B2B neural Credit contingency Dynamic Computer",
       "isFavorite": false,
       "id": 12
     },
     {
-      "name": "Kirk",
-      "image": "/assets/corgi.png",
-      "description": "grow Livermorium Idaho watermelon Cruiser",
-      "isFavorite": true,
+      "name": "Francesca",
+      "image": "/assets/cowardly.png",
+      "description": "eyeball that if Modern attitude shiver JBOD",
+      "isFavorite": false,
       "id": 13
     },
     {
-      "name": "Otis",
-      "image": "/assets/chihuahua.avif",
-      "description": "gosh Realigned Credit Infrastructure gold XML Granite",
+      "name": "Garrick",
+      "image": "/assets/blue-heeler.png",
+      "description": "County Checking generate outside Sleek",
       "isFavorite": false,
       "id": 14
     },
     {
-      "name": "Golda",
-      "image": "/assets/blue-heeler.png",
-      "description": "Cadmium Human male wherever User yippee Norfolk Merseyside",
-      "isFavorite": false,
+      "name": "Georgette",
+      "image": "/assets/cowardly.png",
+      "description": "female withdrawal Recycled Future Dynamic Account SSD blank",
+      "isFavorite": true,
       "id": 15
     },
     {
-      "name": "Carmen",
-      "image": "/assets/chihuahua.avif",
-      "description": "deposit Sports female greatly fuchsia bus Dominican Northwest",
+      "name": "Vern",
+      "image": "/assets/boxer.png",
+      "description": "compressing Bentley Trial provided F2M",
       "isFavorite": true,
       "id": 16
     },
     {
-      "name": "Lera",
+      "name": "Mathilde",
       "image": "/assets/cowardly.png",
-      "description": "Classical online Mandatory facilitate COM Azerbaijan definition",
+      "description": "brand Loan Centralized caveo Automated",
       "isFavorite": true,
       "id": 17
     },
     {
-      "name": "Domenica",
-      "image": "/assets/corgi.png",
-      "description": "Computer program bypassing circa bah",
+      "name": "Aiden",
+      "image": "/assets/dalmation.png",
+      "description": "Louisiana Engineer Customer Female match",
       "isFavorite": true,
       "id": 18
     },
     {
-      "name": "Ruthe",
-      "image": "/assets/dalmation.png",
-      "description": "synergies Loan up Interface API Gloves synthesize",
-      "isFavorite": false,
+      "name": "Otha",
+      "image": "/assets/cowardly.png",
+      "description": "invoice carbonise Architect Cab gosh courageously accomplished Outdoors",
+      "isFavorite": true,
       "id": 19
-    },
-    {
-      "name": "Rudy Poo",
-      "description": "Candy Ass!!",
-      "image": "/assets/blue-heeler.png",
-      "id": 20
-    },
-    {
-      "name": "Smacky",
-      "description": "Smacky dog!! Smacks his lips when he eats!!",
-      "image": "/assets/chihuahua.avif",
-      "id": 22
-    },
-    {
-      "name": "Gypsy",
-      "description": "Dog won't quit moving around!!",
-      "image": "/assets/cowardly.png",
-      "id": 23
-    },
-    {
-      "name": "Barkley",
-      "description": "Dog from Sesame Street",
-      "image": "/assets/corgi.png",
-      "id": 24,
-      "isFavorite": false
-    },
-    {
-      "name": "Ginger",
-      "description": "She was gone on a 3 hour tour",
-      "image": "/assets/boxer.jpeg",
-      "id": 25
-    },
-    {
-      "name": "Venos",
-      "description": "Likes hot dogs and cool franks",
-      "image": "/assets/cowardly.png",
-      "id": 26,
-      "isFavorite": false
-    },
-    {
-      "name": "Sparks",
-      "description": "Electric personality and really lights a room",
-      "image": "/assets/chihuahua.avif",
-      "id": 27,
-      "isFavorite": false
-    },
-    {
-      "name": "Circle",
-      "description": "Likes to hang around. Always comes back to you",
-      "image": "/assets/corgi.png",
-      "id": 28
     }
   ]
 }
